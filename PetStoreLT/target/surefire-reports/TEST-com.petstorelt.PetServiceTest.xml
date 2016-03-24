@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.petstorelt.PetServiceTest" time="0.208" tests="3" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\java\jdk1.8.0_74\jre\bin"/>
+    <property name="java.vm.version" value="25.74-b02"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\git\PetStoreLT"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\git\PetStoreLT"/>
+    <property name="java.runtime.version" value="1.8.0_74-b02"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\java\jdk1.8.0_74\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\thouvela\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="E:\workspaces\dev\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf131042887211193351.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\java\jdk1.8.0_74\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/java/jre1.8.0_74/bin/server;C:/java/jre1.8.0_74/bin;C:/java/jre1.8.0_74/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\java\jdk1.8.0_74\bin;E:\eclipse;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\thouvela"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="thouvela"/>
+    <property name="java.class.path" value="/E:/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.6.2.20150902-0001/jars/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\java\jdk1.8.0_74\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_74"/>
+    <property name="java.ext.dirs" value="C:\java\jdk1.8.0_74\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\java\jdk1.8.0_74\jre\lib\resources.jar;C:\java\jdk1.8.0_74\jre\lib\rt.jar;C:\java\jdk1.8.0_74\jre\lib\sunrsasign.jar;C:\java\jdk1.8.0_74\jre\lib\jsse.jar;C:\java\jdk1.8.0_74\jre\lib\jce.jar;C:\java\jdk1.8.0_74\jre\lib\charsets.jar;C:\java\jdk1.8.0_74\jre\lib\jfr.jar;C:\java\jdk1.8.0_74\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="E:\git\PetStoreLT\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="testAdd on testAdd(com.petstorelt.PetServiceTest)" classname="com.petstorelt.PetServiceTest" time="0.169"/>
+  <testcase name="testFindById on testFindById(com.petstorelt.PetServiceTest)" classname="com.petstorelt.PetServiceTest" time="0.012"/>
+  <testcase name="testRemove on testRemove(com.petstorelt.PetServiceTest)" classname="com.petstorelt.PetServiceTest" time="0.027">
+    <failure message="expected null, but was:&lt;[]&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected null, but was:<[]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotNull(Assert.java:755)
+	at org.junit.Assert.assertNull(Assert.java:737)
+	at org.junit.Assert.assertNull(Assert.java:747)
+	at com.petstorelt.PetServiceTest.testRemove(PetServiceTest.java:49)
+]]></failure>
+    <system-out><![CDATA[15:56:26.627 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.petstorelt.PetServiceTest]
+15:56:26.627 [main] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.petstorelt.PetServiceTest]
+15:56:26.627 [main] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@3d36e4cd testClass = PetServiceTest, testInstance = com.petstorelt.PetServiceTest@64e7619d, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6a472554 testClass = PetServiceTest, locations = '{classpath:context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+15:56:26.627 [main] DEBUG o.s.t.c.c.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@6a472554 testClass = PetServiceTest, locations = '{classpath:context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+15:56:26.627 [main] DEBUG o.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@71a8adcf size = 1, parentContextCount = 0, hitCount = 2, missCount = 1]
+15:56:26.627 [main] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'com.petstorelt.PetServiceTest': AutowiredFieldElement for private com.petstorelt.service.PetService com.petstorelt.PetServiceTest.petService
+15:56:26.627 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'petService'
+15:56:26.628 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test method: context [DefaultTestContext@3d36e4cd testClass = PetServiceTest, testInstance = com.petstorelt.PetServiceTest@64e7619d, testMethod = testRemove@PetServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6a472554 testClass = PetServiceTest, locations = '{classpath:context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+15:56:26.628 [main] DEBUG o.s.jdbc.core.JdbcTemplate - Executing SQL statement [delete from pet where id=1]
+15:56:26.628 [main] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+15:56:26.635 [main] DEBUG o.s.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+15:56:26.637 [main] DEBUG o.s.jdbc.core.JdbcTemplate - Executing SQL query [select * from pet order by id]
+15:56:26.637 [main] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+15:56:26.648 [main] DEBUG o.s.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+15:56:26.653 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test method: context [DefaultTestContext@3d36e4cd testClass = PetServiceTest, testInstance = com.petstorelt.PetServiceTest@64e7619d, testMethod = testRemove@PetServiceTest, testException = java.lang.AssertionError: expected null, but was:<[]>, mergedContextConfiguration = [MergedContextConfiguration@6a472554 testClass = PetServiceTest, locations = '{classpath:context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+]]></system-out>
+  </testcase>
+</testsuite>

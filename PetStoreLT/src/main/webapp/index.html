@@ -1,0 +1,212 @@
+<!--esign baytsrapndex
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html ng-app="petStoreLTApp" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>PetStore LT</title>
+<link href="web/css/style.css" rel="stylesheet" type="text/css"
+	media="all" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed'
+	rel='stylesheet' type='text/css'>
+<!--slider-->
+<link href="web/css/slider.css" rel="stylesheet" type="text/css"
+	media="all" />
+<script type="text/javascript" src="web/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="web/js/jquery.nivo.slider.js"></script>
+<script type="text/javascript">
+	$(window).load(function() {
+		$('#slider').nivoSlider();
+	});
+</script>
+<!--light-box-->
+<script type="text/javascript" src="web/js/jquery.lightbox.js"></script>
+<link rel="stylesheet" type="text/css" href="web/css/lightbox.css"
+	media="screen">
+<script type="text/javascript">
+	$(function() {
+		$('.gallery a').lightBox();
+	});
+</script>
+
+<!--PetStore LT-->
+<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+	type="text/css" />
+<script src="assets/angular/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/petCtrl.js"></script>
+<script src="js/services/petSrv.js"></script>
+
+</head>
+<body>
+	<div class="back" ng-controller="PetCtrl">
+		<div class="header">
+			<div class="wrap">
+				<div class="header-top">
+					<div class="logo">
+						<span class="title">PetStore LT for RBC</span>
+					</div>
+					<div class="logout">
+				       <form action="/petStoreLT/logout" method="post">
+				            <button class="btn btn-default" type="submit"><label class="glyphicon glyphicon-log-out">&nbsp;Sign out</label></button>
+				       </form>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="header-bottom">
+
+				<div class="search">
+
+					<form name="searchForm" ng-submit="findPetById()">
+						<div class="form-inline">
+							<div class="form-group">
+								<label class="title" for="searchPetId">Identifier</label> 
+								<input type="text"
+									id="searchPetId" ng-model="search.id" class="form-control"
+									placeholder="Pet Id" />									
+							</div>
+							<button style="margin: 0 0 -20px 20px" class="btn btn-default" type="submit"><label class="glyphicon glyphicon-search">&nbsp;Find</label></button>
+						</div>
+					</form>
+				</div>
+
+				<div class="add">
+					<form name="addForm" ng-submit="addPet()">
+
+						<div class="form-inline">
+							<div class="form-group">
+								<label class="title" for="petId">Identifier</label> <input type="text"
+									class="form-control" id="petId" ng-model="add.id" required="true"
+									placeholder="Pet Id">
+							</div>
+							<div class="form-group">
+								<label class="title" for="petName">Name</label> <input type="text"
+									class="form-control" id="petName" ng-model="add.name" required="true"
+									placeholder="Pet Name">
+							</div>
+
+							<div class="form-group">
+								<label class="title" for="petPrice">Price</label> <input type="text"
+									class="form-control" id="petPrice" ng-model="add.price"
+									placeholder="Pet Price">
+							</div>
+							<button style="margin: 0 0 -20px 20px" class="btn btn-default" type="submit"><label class="glyphicon glyphicon-plus">&nbsp;Add</label></button>						
+						</div>
+					</form>					
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="content-middle">
+			
+				<div class="wrap" ng-show="message && message!=null">
+					<div class="content-top">
+						<label>{{message}}</label>
+					</div>
+						<div class="clear"></div>
+				</div>
+
+				<div class="wrap" ng-show="pets.length>0">
+					<div class="content-top">
+						<table
+							class="table table-bordered table-striped table-condensed table-hover panel-table table-scroll">
+							<thead>
+								<tr>
+									<th style="width: 15%" class="text-left">Id</th>
+									<th style="width: 35%" class="text-left">Name</th>
+									<th style="width: 25%" class="text-left">Price</th>
+									<th style="width: 25%" class="text-left"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="pet in pets">
+									<td style="width: 15%" class="text-left">{{pet.id}}</td>
+									<td style="width: 35%" class="text-left">{{pet.name}}</td>
+									<td style="width: 25%" class="text-left">{{pet.price!='null'?pet.price:''}}</td>
+									<td style="width: 25%" class="text-left">
+										<form name="deleteForm" ng-submit="removePet(pet.id)">
+											<button type="submit" class="btn btn-default btn-sm">
+												<span class="glyphicon glyphicon-trash"></span> Delete
+											</button>
+										</form>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+				
+			</div>			
+	 	</div>
+	 	
+
+	</div>
+	
+	<div class="footer-top">
+					<div class="gallery">
+						<ul>
+							<li>
+								<div class="dc-head1">
+									<h3>Dogs</h3>
+							   	</div>
+								<img height="160" src="images/dog.jpg" alt=""></span>
+								</li>
+								<li><div class="dc-head1">
+										<h3>Cats</h3>
+							    	</div>
+									<img height="160" src="images/cat.jpg" alt=""> 
+								</li>
+							<li class="last">
+								<div class="dc-head1">
+									<h3>Rabbits</h3>
+							    </div>
+							    <span><img height="160" src="images/rabbit.jpg" alt=""></span>
+							    </li>
+							<div class="clear"> </div>
+						</ul><br>
+					</div>
+					<div class="clear"></div> 
+			   </div>
+	
+	<div class="footer">
+			
+		<div class="wrap">
+			<div class="copy">
+				<p>
+					© 2013 All rights Reserved | Design by <a
+						href="http://w3layouts.com">W3Layouts</a>
+				</p>
+			</div>
+			<ul class="follow_icon">
+				<li><a href="#" style="opacity: 1;"><img
+						src="web/images/fb.png" alt=""></a></li>
+				<li><a href="#" style="opacity: 1;"><img
+						src="web/images/tw.png" alt=""></a></li>
+				<li><a href="#" style="opacity: 1;"><img
+						src="web/images/rss.png" alt=""></a></li>
+				<li><a href="#" style="opacity: 1;"><img
+						src="web/images/g+.png" alt=""></a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<div class="footer-bot">
+		<p>&nbsp;</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+</body>
+</html>
+
+
+
