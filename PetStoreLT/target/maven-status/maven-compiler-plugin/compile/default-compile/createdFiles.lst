@@ -1,7 +1,0 @@
-com\petstorelt\model\Pet.class
-com\petstorelt\controller\PetStoreController.class
-com\petstorelt\service\IPetService.class
-com\petstorelt\ApplicationConfig.class
-com\petstorelt\service\PetService.class
-com\petstorelt\Application.class
-com\petstorelt\security\WebSecurityConfig.class
